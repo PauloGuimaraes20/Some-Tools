@@ -1,5 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-obj/Debug/net7.0-android/android/* linguist-vendored
 *.java linguist-detectable=false
+*.aidl linguist-detectable=false
+obj/Debug/net7.0-android/android/* linguist-vendored
+
 
