@@ -1,3 +1,4 @@
 # Auto detect text files and perform LF normalization
-obj/Debug/net7.0-android/* linguist-vendored
+obj/Debug/net7.0-android/android/* linguist-vendored
+obj/Debug/net7.0-android/android/src/* linguist-vendored
 * text=auto
