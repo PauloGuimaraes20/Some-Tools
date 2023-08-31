@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:MauiApp1.ViewModels"
+             x:Class="MauiApp1.Views.PhoneDialerPage"
+             Title="PhoneDialer">
+
+
+    <ContentPage.BindingContext>
+        <viewModels:PhoneDialerViewModel />
+    </ContentPage.BindingContext>
+    
+    <VerticalStackLayout Spacing="15" Padding="20">
+        <Label Text = "Enter a Phoneword"
+               FontSize ="20"/>
+
+        <Entry x:Name = "PhoneNumberText"
+               Text = "1-555-NETMAUI" />
+
+        <Button x:Name = "TranslateButton"
+                Text = "Translate"
+                Command = "{Binding TranslatePhoneNum}"/> 
+
+        <Button x:Name = "CallButton"
+                Text = "Call"
+                IsEnabled = "{Binding IsCallBtnEnabled}"
+                Command = "{Binding CallPhoneNum}" />
+        
+    </VerticalStackLayout>
+</ContentPage>
