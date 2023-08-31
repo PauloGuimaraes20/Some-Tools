@@ -33,11 +33,12 @@ internal class PhoneDialerViewModel : ObservableObject
     }
 
 
+    //fix this function vv
     private async Task Translate()
     {
         
-        string translatedNumber = ToNumber(EnteredNumber); ;
-        Console.WriteLine("funcao executada");
+        string translatedNumber = ToNumber(EnteredNumber); 
+        
 
         if (!string.IsNullOrEmpty(translatedNumber))
         {
@@ -55,7 +56,7 @@ internal class PhoneDialerViewModel : ObservableObject
     }
 
 
-
+    //intents??
     private async Task Call()
     {
         
