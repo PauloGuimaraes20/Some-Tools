@@ -1,2 +1,2 @@
-AdbTarget=-s 192.168.1.225:5555
+AdbTarget=-s emulator-5554
 AdbOptions=

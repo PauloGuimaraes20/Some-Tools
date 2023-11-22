@@ -10,7 +10,7 @@ namespace MauiApp1.ViewModels;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 
-internal class PhoneDialerViewModel : ObservableObject
+internal class PhoneDialerViewModel : ObservableObject, INotifyPropertyChanged
 {
 
     public ICommand TranslatePhoneNum { get; private set; }
@@ -18,6 +18,9 @@ internal class PhoneDialerViewModel : ObservableObject
     public string EnteredNumber { get; private set; }
     public bool IsCallBtnEnabled { get; private set; }
     public string CallBtnText { get; private set; }
+    private bool isCallBtnEnabled;
+    
+
 
 
     internal string ToNumber(string raw)
@@ -32,13 +35,16 @@ internal class PhoneDialerViewModel : ObservableObject
         CallPhoneNum = new AsyncRelayCommand(Call);
     }
 
-
+    
+    
     //fix this function vv
     private async Task Translate()
     {
-        
-        string translatedNumber = ToNumber(EnteredNumber); 
-        
+        Console.WriteLine("texto entrando");
+        Console.WriteLine(EnteredNumber);
+        string translatedNumber = ToNumber(EnteredNumber);
+        Console.WriteLine("texto saindo");
+        Console.WriteLine(translatedNumber);
 
         if (!string.IsNullOrEmpty(translatedNumber))
         {

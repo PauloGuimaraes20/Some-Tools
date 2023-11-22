@@ -13,10 +13,11 @@
     <VerticalStackLayout Spacing="15" Padding="20">
         <Label Text = "Enter a Phoneword"
                FontSize ="20"/>
-
-        <Entry x:Name = "PhoneNumberText"
-               Text = "1-555-NETMAUI" />
-
+ 
+        <Entry Keyboard="Telephone"
+               Placeholder="Enter phone number"
+               Text = "{Binding EnteredNumber}"/>
+        
         <Button x:Name = "TranslateButton"
                 Text = "Translate"
                 Command = "{Binding TranslatePhoneNum}"/> 
